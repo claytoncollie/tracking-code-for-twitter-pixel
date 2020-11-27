@@ -3,7 +3,7 @@ includes:
 parameters:
     level: max
     paths:
-        - tracking-code-for-pinterest-pixel.php
+        - tracking-code-for-twitter-pixel.php
         - inc/admin.php
         - inc/public.php
     checkMissingIterableValueType: false

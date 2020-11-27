@@ -1,10 +1,10 @@
-# Tracking Code For Pinterest Pixel
+# Tracking Code For Twitter Pixel
 
-Tracking Code For Pinterest Pixel is a simple, lightweight WordPress plugin for inserting your Pinterest Pixel tracking code. The plugin does one thing and one thing only; prints the standard Pinterest Pixel tacking script to the `<head>` of your website. To insert your tag ID, navigate to Settings > General and then scroll to the bottom of the page.
+Tracking Code For Twitter Pixel is a simple, lightweight WordPress plugin for inserting your Twitter Pixel tracking code. The plugin does one thing and one thing only; prints the standard Twitter Pixel tacking script to the `<head>` of your website. To insert your tag ID, navigate to Settings > General and then scroll to the bottom of the page.
 
 ### Getting Started
 
-1. Upload `tracking-code-for-pinterest-pixel` to the `/wp-content/plugins/` directory
+1. Upload `tracking-code-for-twitter-pixel` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Navigate to Settings > General > scroll to the bottom of the page
 4. Insert your tag ID
@@ -12,7 +12,7 @@ Tracking Code For Pinterest Pixel is a simple, lightweight WordPress plugin for 
 
 ### Composer
 
-`composer require claytoncollie/tracking-code-for-pinterest-pixel`
+`composer require claytoncollie/tracking-code-for-twitter-pixel`
 
 ### Filters
 
@@ -20,16 +20,16 @@ If you want to set the tag ID without using the wp-admin user interface, use the
 
 ```php
 add_filter(
-	'tracking_code_for_pinterest_pixel_id',
+	'tracking_code_for_twitter_pixel_id',
 	/**
-	 * Set Pinterest Pixel tag ID.
+	 * Set Twitter Pixel tag ID.
 	 *
 	 * @param string $tag_id Tag ID.
 	 *
 	 * @return string
 	 */
 	function ( $tag_id ) {
-		return '1234567891234';
+		return '123456789';
 	}
 );
 ```
@@ -50,9 +50,9 @@ No. This plugin is intentionally lightweight. All it does is register a settings
 
 ##### I found a bug. How do I report it?
 
-https://github.com/claytoncollie/tracking-code-for-pinterest-pixel/issues
+https://github.com/claytoncollie/tracking-code-for-twitter-pixel/issues
 
 ##### Can I use this plugin with Composer?
 
-https://packagist.org/packages/claytoncollie/tracking-code-for-pinterest-pixel
+https://packagist.org/packages/claytoncollie/tracking-code-for-twitter-pixel
 

@@ -2,7 +2,7 @@
 /**
  * Public facing features.
  *
- * @package Tracking_Code_For_Pinterest_Pixel
+ * @package Tracking_Code_For_Twitter_Pixel
  */
 
 // If this file is called directly, abort.
@@ -10,22 +10,22 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-add_action( 'wp_head', 'tracking_code_for_pinterest_pixel_do_the_script', 1, 0 );
+add_action( 'wp_head', 'tracking_code_for_twitter_pixel_do_the_script', 1, 0 );
 /**
  * Output the tracking code snippet to the frontend.
  *
  * @return void
  * @since 1.0.0
  */
-function tracking_code_for_pinterest_pixel_do_the_script() {
+function tracking_code_for_twitter_pixel_do_the_script() {
 	/**
 	 * Filter the tag_id variable to support other methods of setting this value.
 	 *
-	 * @param string $tag_id The Pinterest Pixel tag ID.
+	 * @param string $tag_id The Twitter Pixel tag ID.
 	 * @return string
 	 * @since 1.0.0
 	 */
-	$tag_id = apply_filters( 'tracking_code_for_pinterest_pixel_id', get_option( 'tracking_code_for_pinterest_pixel', '' ) );
+	$tag_id = apply_filters( 'tracking_code_for_twitter_pixel_id', get_option( 'tracking_code_for_twitter_pixel', '' ) );
 
 	if ( '' === $tag_id ) {
 		return;
@@ -34,22 +34,9 @@ function tracking_code_for_pinterest_pixel_do_the_script() {
 	printf(
 		// phpcs:disable
 		'
-		<!-- Pinterest Tag -->
-		<script>
-		!function(e){if(!window.pintrk){window.pintrk = function () {
-		window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
-		n=window.pintrk;n.queue=[],n.version="3.0";var
-		t=document.createElement("script");t.async=!0,t.src=e;var
-		r=document.getElementsByTagName("script")[0];
-		r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
-		pintrk(\'load\', \'%1$s\');
-		pintrk(\'page\');
-		</script>
-		<noscript>
-		<img height="1" width="1" style="display:none;" alt=""
-		src="https://ct.pinterest.com/v3/?event=init&tid=%1$s&noscript=1" />
-		</noscript>
-		<!-- end Pinterest Tag -->
+		<!-- Twitter universal website tag code -->
+		<script>!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);},s.version=\'1.1\',s.queue=[],u=t.createElement(n),u.async=!0,u.src=\'//static.ads-twitter.com/uwt.js\',a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,\'script\');twq(\'init\',\'%1$s\');twq(\'track\',\'PageView\');</script>
+		<!-- End Twitter universal website tag code -->
 		',
 		// phpcs:enable
 		esc_attr( $tag_id )

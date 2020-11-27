@@ -2,7 +2,7 @@
 /**
  * Admin facing features.
  *
- * @package Tracking_Code_For_Pinterest_Pixel
+ * @package Tracking_Code_For_Twitter_Pixel
  */
 
 // If this file is called directly, abort.
@@ -10,34 +10,34 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-add_action( 'admin_init', 'tracking_code_for_pinterest_pixel_add_settings_field', 10, 0 );
+add_action( 'admin_init', 'tracking_code_for_twitter_pixel_add_settings_field', 10, 0 );
 /**
  * Register the settings field for the tag ID.
  *
  * @return void
  * @since 1.0.0
  */
-function tracking_code_for_pinterest_pixel_add_settings_field() {
+function tracking_code_for_twitter_pixel_add_settings_field() {
 	add_settings_field(
-		'tracking_code_for_pinterest_pixel_id_field',
-		esc_html__( 'Pinterest Pixel', 'tracking-code-for-pinterest-pixel' ),
-		'tracking_code_for_pinterest_pixel_text_settings_field',
+		'tracking_code_for_twitter_pixel_id_field',
+		esc_html__( 'Twitter Pixel', 'tracking-code-for-twitter-pixel' ),
+		'tracking_code_for_twitter_pixel_text_settings_field',
 		'general',
 		'default',
 		array(
-			'id'          => 'tracking-code-for-pinterest-pixel',
-			'name'        => 'tracking_code_for_pinterest_pixel',
-			'value'       => get_option( 'tracking_code_for_pinterest_pixel', '' ),
-			'description' => esc_html__( 'Enter your Pinterest Pixel tag ID eg. 1234567891234', 'tracking-code-for-pinterest-pixel' ),
+			'id'          => 'tracking-code-for-twitter-pixel',
+			'name'        => 'tracking_code_for_twitter_pixel',
+			'value'       => get_option( 'tracking_code_for_twitter_pixel', '' ),
+			'description' => esc_html__( 'Enter your Twitter Pixel tag ID eg. 123456789', 'tracking-code-for-twitter-pixel' ),
 		)
 	);
 
 	register_setting(
 		'general',
-		'tracking_code_for_pinterest_pixel',
+		'tracking_code_for_twitter_pixel',
 		array(
 			'type'              => 'string',
-			'description'       => esc_html__( 'Pinterest Pixel tag ID', 'tracking-code-for-pinterest-pixel' ),
+			'description'       => esc_html__( 'Twitter Pixel tag ID', 'tracking-code-for-twitter-pixel' ),
 			'sanitize_callback' => 'sanitize_text_field',
 			'show_in_rest'      => true,
 			'default'           => '',
@@ -52,7 +52,7 @@ function tracking_code_for_pinterest_pixel_add_settings_field() {
  * @return void
  * @since 1.0.0
  */
-function tracking_code_for_pinterest_pixel_text_settings_field( $args ) {
+function tracking_code_for_twitter_pixel_text_settings_field( $args ) {
 	$args = wp_parse_args(
 		$args,
 		array(

@@ -1,6 +1,6 @@
 {
-    "name": "claytoncollie/tracking-code-for-pinterest-pixel",
-    "description": "Add Pinterest Pixel tracking to your website",
+    "name": "claytoncollie/tracking-code-for-twitter-pixel",
+    "description": "Add Twitter Pixel tracking to your website",
     "type": "wordpress-plugin",
     "license": "GPL-3.0-or-later",
     "authors": [

@@ -4,11 +4,11 @@ While the purpose of this plugin is to be very tightly scoped, issues and pull r
 
 1. Clone the repository to your `wp-content/plugins/` directory.
 
-`git clone git@github.com:claytoncollie/tracking-code-for-pinterest-pixel.git`
+`git clone git@github.com:claytoncollie/tracking-code-for-twitter-pixel.git`
 
 2. Navigate into the directory.
 
-`cd tracking-code-for-pinterest-pixel`
+`cd tracking-code-for-twitter-pixel`
 
 3. Install Composer dependencies.
 
