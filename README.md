@@ -1,15 +1,13 @@
 # Tracking Code For Pinterest Pixel
 
-Tracking Code For Pinterest Pixel is a simple, lightweight WordPress plugin for inserting your Pinterest Pixel Universal Analytics tracking code. The plugin does one thing and one thing only; prints the standard Pinterest Pixel tacking script to the `<head>` of your website. To insert your measurement ID, navigate to Settings > General and then scroll to the bottom of the page.
-
-This plugin will not work with Pinterest Pixel 4; only the Universal Analytics version. 
+Tracking Code For Pinterest Pixel is a simple, lightweight WordPress plugin for inserting your Pinterest Pixel tracking code. The plugin does one thing and one thing only; prints the standard Pinterest Pixel tacking script to the `<head>` of your website. To insert your tag ID, navigate to Settings > General and then scroll to the bottom of the page.
 
 ### Getting Started
 
 1. Upload `tracking-code-for-pinterest-pixel` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Navigate to Settings > General > scroll to the bottom of the page
-4. Insert your measurement ID
+4. Insert your tag ID
 5. Save your changes
 
 ### Composer
@@ -18,20 +16,20 @@ This plugin will not work with Pinterest Pixel 4; only the Universal Analytics v
 
 ### Filters
 
-If you want to set the measurement ID without using the wp-admin user interface, use the filter below.
+If you want to set the tag ID without using the wp-admin user interface, use the filter below.
 
 ```php
 add_filter(
 	'tracking_code_for_pinterest_pixel_id',
 	/**
-	 * Set Pinterest Pixel measurement ID.
+	 * Set Pinterest Pixel tag ID.
 	 *
-	 * @param string $measurement_id Measurement ID.
+	 * @param string $tag_id Tag ID.
 	 *
 	 * @return string
 	 */
-	function ( $measurement_id ) {
-		return 'UA-7654321';
+	function ( $tag_id ) {
+		return '1234567891234';
 	}
 );
 ```
