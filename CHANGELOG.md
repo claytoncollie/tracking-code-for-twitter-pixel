@@ -1,4 +1,17 @@
 # Changelog
 
+### 2.0.0
+* Add PHP namespace
+* Add wp-config.php definition support for tag ID
+* Add filter-based configuration support
+* Add disabled input field when definition or filter overrides value
+* Add noscript fallback for tracking pixel
+* Add parameter and return type hints to all functions
+* Add X (formerly Twitter) branding
+* Fix incorrect tags in readme
+* Bump minimum PHP version to 7.2
+* Bump minimum WordPress version to 5.2
+* Bump tested up to WordPress 6.9
+
 ### 1.0.0
 * Initial release
